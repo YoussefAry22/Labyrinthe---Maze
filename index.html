@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/maze.png" type="image/x-icon">
+    <title>LABYRINTH</title>
+</head>
+<body>
+    <div class="board welcome">
+        <div>Press 'Play' to START</div>
+        <button onclick="startnewgame(game)">▶ Play</button>
+    </div>
+    <div class="timer-board cached">
+        <div class="timer">00:00</div>
+        <div class="button-containers">
+            <div class="game-button" onclick="pause(game,this)">⏸</div>
+            <div class="game-button" onclick="restart(game)">🔁</div>
+            <div class="game-button" onclick="location.reload()">⏹</div>
+        </div>
+    </div>
+    <div class="game-board cached">
+        <div class="maze"></div>
+    </div>
+    <div class="board win-result cached">
+        <div> Congratulations ! You won !</div>
+        <div class="result-details" id="score"></div>
+        <div class="result-details" id="time"></div>
+        <button onclick="restart(game)">⟳ Replay</button>
+    </div>
+    <div class="board lose-result cached">
+        <div>You Lost !</div>
+        <button onclick="restart(game)">⟳ Replay</button>
+    </div>
+</body>
+<script src="scripts/classes.js"></script>
+<script src="scripts/game.js"></script>
+<script src="scripts/drawers.js"></script>
+<script src="scripts/app.js"></script>
+</html>
